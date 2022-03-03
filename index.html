@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ebeae3ceda.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>PromodoApp</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div id="timer">
+
+            <svg width="260" height="260">
+                <circle class="defaultCircle" cx="125" cy="125" r="120" stroke="#FFC680" stroke-width="10" fill="none"
+                    stroke-linecap="round" />
+                <circle id="animateCircle" cx="125" cy="125" r="120" stroke="#ED872D" stroke-width="10" fill="none"
+                    stroke-linecap="round" />
+            </svg>
+
+            <span id="minute">20</span>
+            <span>:</span>
+            <span id="second">00</span>
+        </div>
+        <p id="status">Timer stop now</p>
+        <div class="option">
+            <a id="play" onclick="playFunc()" href="javascript:void(0)"><i class="fa-solid fa-play"></i><i
+                    class="fa-solid fa-pause"></i></a>
+            <a id="stop" onclick="stopFunc()" href="javascript:void(0)"><i class="fa-solid fa-stop"></i>Stop</a>
+            <a id="reset" onclick="musicPlay()" href="javascript:void(0)"><i class="fa-solid fa-volume-high"></i><i class="fa-solid fa-volume-xmark"></i></a>
+        </div>
+    </div>
+
+    <audio id="music" loop>
+        <source src="./source/music/backgroundMusic.mp3" type="audio/mp3">
+    </audio>
+
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        referrerpolicy="no-referrer"></script>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
