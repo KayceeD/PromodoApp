@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-weight: 300;
+    background: linear-gradient(to left,#607d8b,#FFA700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.wrap{
+    display: inline-block;
+    min-width: 360px;
+    min-height: 400px;
+    padding: 50px 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+}
+#timer{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    line-height: 250px;
+    border-radius: 50%;
+    font-size: 32px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+p{
+    font-weight: 400;
+    color: gray;
+    padding: 30px 0;
+}
+.option a{
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+}
+#play,#reset{
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50px;
+    color: #fff;
+    background: linear-gradient(45deg,#ED872D,#607d8b);
+}
+#stop{
+    padding: 15px 20px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 400;
+    background: linear-gradient(45deg,#ED872D,#607d8b);
+}
+
+#play:active,#reset:active,#stop:active{
+    transform: scale(0.95);
+}
+
+.pause .fa-play,
+.fa-pause{
+    display: none;
+}
+.pause .fa-pause{
+    display:inline-block;
+}
+
+.volume .fa-volume-high,
+.fa-volume-xmark{
+    display: none;
+}
+.volume .fa-volume-xmark{
+    display: inline;
+    color: red;
+}
+
+
+/*Circle animation*/
+#timer svg{
+    position: absolute;
+    left:0;
+}
+
+#animateCircle.addAnimation{
+    stroke-dasharray: 770;
+    stroke-dashoffset: -770;
+    animation: animateCircle 1280s linear infinite;
+    animation-play-state: paused;
+}
+@keyframes animateCircle{
+    from{
+        stroke-dashoffset: 0;
+    }
+}
+
+.defaultCircle{
+    opacity: .3;
+}
+
+#lastSecond{
+    color: red;
+}
